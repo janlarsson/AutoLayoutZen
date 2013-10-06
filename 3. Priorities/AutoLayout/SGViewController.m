@@ -10,9 +10,10 @@
 
 @interface SGViewController ()
 
-@property (nonatomic, strong) UILabel *topView;
-@property (nonatomic, strong) UIView *centeredView;
-@property (nonatomic, strong) UILabel *bottomView;
+@property (nonatomic, strong) UIView *containerView;
+@property (nonatomic, strong) UIButton *shortButton;
+@property (nonatomic, strong) UIButton *mediumButton;
+@property (nonatomic, strong) UIButton *largeButton;
 
 @end
 
@@ -34,26 +35,48 @@
 // | View Lifecyle
 // +--------------------------------------------------------------------
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor darkGrayColor];
     
-    [self.view addSubview:self.topView];
-    [self.view addSubview:self.centeredView];
-    [self.view addSubview:self.bottomView];
+    [self.view addSubview:self.containerView];
     
-    NSDictionary *views = @{
-                            @"top" : self.topView,
-                            @"center" : self.centeredView,
-                            @"bottom" : self.bottomView
-                            };
+    [self.containerView addSubview:self.shortButton];
+    [self.containerView addSubview:self.mediumButton];
+    [self.containerView addSubview:self.largeButton];
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[top(>=20@900,<=100@900)]-[center(>=75@1000,<=2000@1000)]-[bottom(>=20@900,<=100@900)]-|" options:0 metrics:nil views:views]];
+    // We want the container to be the width of the superview, with standard spacing.
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[container]-|" options:0 metrics:Nil views:[self viewsDictionary]]];
+    
+    // Setting a fixed height of 100pt for the container
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:100]];
+    
+    
+    // Vertically centering our container view
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
+    
+    
+    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[top]-[center]-[bottom]|" options:0 metrics:nil views:[self viewsDictionary]]];
 
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[top(==40)]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[center(==40)]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bottom(==40)]|" options:0 metrics:nil views:views]];
+    
+    // Take a look at these values.
+    // They are determinining which of the views in our three boxes will get to dominate
+    // how much space is used when laying them out.
+    
+    // Try adjusting them between UILayoutPriorityRequired, UILayoutPriorityDefaultLow and
+    // UILayoutPriorityDefaultHigh and see what effects it has on the layout of the buttons
+    // in the container view.
+    [self.shortButton setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+    [self.mediumButton setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+    [self.largeButton setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+
+    
 }
 
 #pragma mark -
@@ -62,48 +85,81 @@
 // | Dynamic Accessor Methods
 // +--------------------------------------------------------------------
 
-- (UILabel *)topView
+
+- (UIView *)containerView
 {
-    if (_topView == nil)
+    if (_containerView == nil)
     {
-        _topView = [[UILabel alloc] initWithFrame:CGRectZero];
+        _containerView = [UIView new];
         
         // jww: This tells Auto Layout to handle all the layout stuff.
-        _topView.translatesAutoresizingMaskIntoConstraints = NO;
-        _topView.backgroundColor = [UIColor redColor];
-        _topView.text = @"00:00";
+        _containerView.translatesAutoresizingMaskIntoConstraints = NO;
+        _containerView.backgroundColor = [UIColor blackColor];
         
     }
-    return _topView;
+    return _containerView;
 }
 
-- (UIView *)centeredView
+- (UIButton *)shortButton
 {
-    if (_centeredView == nil)
+    if (_shortButton == nil)
     {
-        _centeredView = [[UIView alloc] initWithFrame:CGRectZero];
+        _shortButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         
         // jww: This tells Auto Layout to handle all the layout stuff.
-        _centeredView.translatesAutoresizingMaskIntoConstraints = NO;
-        _centeredView.backgroundColor = [UIColor whiteColor];
-        
+        _shortButton.translatesAutoresizingMaskIntoConstraints = NO;
+        _shortButton.backgroundColor = [UIColor redColor];
+        [_shortButton setTitle:@"Short Button" forState:UIControlStateNormal];
+        _shortButton.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     }
-    return _centeredView;
+    return _shortButton;
 }
 
-- (UILabel *)bottomView
+- (UIButton *)mediumButton
 {
-    if (_bottomView == nil)
+    if (_mediumButton == nil)
     {
-        _bottomView = [[UILabel alloc] initWithFrame:CGRectZero];
+        _mediumButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         
         // jww: This tells Auto Layout to handle all the layout stuff.
-        _bottomView.translatesAutoresizingMaskIntoConstraints = NO;
-        _bottomView.backgroundColor = [UIColor blueColor];
-        _bottomView.text = @"00:00";
+        _mediumButton.translatesAutoresizingMaskIntoConstraints = NO;
+        _mediumButton.backgroundColor = [UIColor whiteColor];
+        [_mediumButton setTitle:@"This is a medium button" forState:UIControlStateNormal];
+        _mediumButton.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     }
-    return _bottomView;
+    return _mediumButton;
 }
 
+- (UIButton *)largeButton
+{
+    if (_largeButton == nil)
+    {
+        _largeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        
+        // jww: This tells Auto Layout to handle all the layout stuff.
+        _largeButton.translatesAutoresizingMaskIntoConstraints = NO;
+        _largeButton.backgroundColor = [UIColor blueColor];
+        [_largeButton setTitle:@"This is a really really really long button" forState:UIControlStateNormal];
+        _largeButton.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    }
+    return _largeButton;
+}
+
+#pragma mark -
+#pragma mark Private/Convenience Methods
+// +--------------------------------------------------------------------
+// | Private/Convenience Methods
+// +--------------------------------------------------------------------
+
+- (NSDictionary *)viewsDictionary
+{
+    return @{
+            @"container" : self.containerView,
+            @"top" : self.shortButton,
+            @"center" : self.mediumButton,
+            @"bottom" : self.largeButton
+            };
+    
+}
 
 @end

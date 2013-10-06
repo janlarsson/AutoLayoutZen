@@ -264,6 +264,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AutoLayout/View Priorities-Prefix.pch";
 				INFOPLIST_FILE = "AutoLayout/View Priorities-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "View Priorities";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +276,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AutoLayout/View Priorities-Prefix.pch";
 				INFOPLIST_FILE = "AutoLayout/View Priorities-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "View Priorities";
 				WRAPPER_EXTENSION = app;
 			};

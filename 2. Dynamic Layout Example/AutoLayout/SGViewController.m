@@ -45,9 +45,15 @@
     
     [self.view addSubview:self.centeredView];
     
-    CGFloat width = [[UIScreen mainScreen] applicationFrame].size.width / 2;
-    CGFloat height = [[UIScreen mainScreen] applicationFrame].size.height / 4;
+    // Calculating our width and height of the box using the screen bounds.
+    // We want the box to be half the width and 1/4 the height of its parent.
+    CGFloat width = [[UIScreen mainScreen] bounds].size.width / 2;
+    CGFloat height = [[UIScreen mainScreen] bounds].size.height / 4;
+    
+    // Our views dictionary is just the centeredView
     NSDictionary *views = @{ @"view" : self.centeredView };
+    
+    // The metrics dictionary is our values from line 50 & 51 wrapped in NSNumbers.
     NSDictionary *metrics = @{
                               @"halfViewWidth" : @(width),
                               @"halfViewHeight" : @(height)

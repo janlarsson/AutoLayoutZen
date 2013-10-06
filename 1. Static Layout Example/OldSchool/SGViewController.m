@@ -45,8 +45,15 @@
     
     [self.view addSubview:self.centeredView];
     
+    // Setting up the orange box.
+    
+    // Half the width of the view frame.
     CGFloat width = roundf(self.view.frame.size.width / 2);
+    
+    // 1/4 the height of the view frame.
     CGFloat height = roundf(self.view.frame.size.height / 4);
+    
+    // Centered horizontally and vertically
     CGFloat centeredX = roundf((self.view.frame.size.width - width) / 2);
     CGFloat centeredY = roundf((self.view.frame.size.height - height) / 2);
     self.centeredView.frame = (CGRect) { { centeredX, centeredY }, { width, height } };
