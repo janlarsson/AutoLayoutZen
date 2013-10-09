@@ -82,9 +82,9 @@
         constant = 100.0f;
     }
     
-    self.centeredHeightConstraint.constant = constant;
-    self.centeredWidthConstraint.constant = constant;
     [UIView animateWithDuration:0.1f animations:^{
+        self.centeredHeightConstraint.constant = constant;
+        self.centeredWidthConstraint.constant = constant;
         [self.centeredView layoutIfNeeded];
     } completion:^(BOOL finished) {
         self.zoomed = !self.isZoomed;
