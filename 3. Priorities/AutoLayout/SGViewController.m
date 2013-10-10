@@ -55,7 +55,7 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[container]-|" options:0 metrics:Nil views:[self viewsDictionary]]];
     
     // Setting a fixed height of 100pt for the container
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:100]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[container(100)]" options:0 metrics:nil views:[self viewsDictionary]]];
     
     
     // Vertically centering our container view
