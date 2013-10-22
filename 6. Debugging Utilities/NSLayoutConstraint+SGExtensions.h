@@ -10,4 +10,13 @@
 
 @interface NSLayoutConstraint (SGExtensions)
 
++ (id)sg_constraintWithItem:(id)view1
+                   attribute:(NSLayoutAttribute)attribute1
+                   relatedBy:(NSLayoutRelation)relation
+                      toItem:(id)view2
+                   attribute:(NSLayoutAttribute)attribute2
+                  multiplier:(CGFloat)multiplier
+                    constant:(CGFloat)constant
+                    priority:(UILayoutPriority)priority;
+
 @end
