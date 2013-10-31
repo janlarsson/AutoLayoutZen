@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D000346C1822004D008378F6 /* SGPostBodyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D000346B1822004D008378F6 /* SGPostBodyLabel.m */; };
+		D000346F182201CA008378F6 /* NSLayoutConstraint+SGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D000346E182201CA008378F6 /* NSLayoutConstraint+SGExtensions.m */; };
+		D0E904831821C15B0033D4B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E904821821C15B0033D4B0 /* Foundation.framework */; };
+		D0E904851821C15B0033D4B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E904841821C15B0033D4B0 /* CoreGraphics.framework */; };
+		D0E904871821C15B0033D4B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E904861821C15B0033D4B0 /* UIKit.framework */; };
+		D0E9048D1821C15B0033D4B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0E9048B1821C15B0033D4B0 /* InfoPlist.strings */; };
+		D0E9048F1821C15B0033D4B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E9048E1821C15B0033D4B0 /* main.m */; };
+		D0E904931821C15B0033D4B0 /* SGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E904921821C15B0033D4B0 /* SGAppDelegate.m */; };
+		D0E904961821C15B0033D4B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E904941821C15B0033D4B0 /* Main.storyboard */; };
+		D0E904991821C15B0033D4B0 /* SGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E904981821C15B0033D4B0 /* SGViewController.m */; };
+		D0E9049B1821C15B0033D4B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E9049A1821C15B0033D4B0 /* Images.xcassets */; };
+		D0E904A21821C15B0033D4B0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E904A11821C15B0033D4B0 /* XCTest.framework */; };
+		D0E904A31821C15B0033D4B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E904821821C15B0033D4B0 /* Foundation.framework */; };
+		D0E904A41821C15B0033D4B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E904861821C15B0033D4B0 /* UIKit.framework */; };
+		D0E904AC1821C15B0033D4B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0E904AA1821C15B0033D4B0 /* InfoPlist.strings */; };
+		D0E904AE1821C15B0033D4B0 /* ALDynamicCellHeightsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E904AD1821C15B0033D4B0 /* ALDynamicCellHeightsTests.m */; };
+		D0E904B91821C2730033D4B0 /* SGPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E904B81821C2730033D4B0 /* SGPostTableViewCell.m */; };
+		D0E904BC1821C52F0033D4B0 /* SGADNClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E904BB1821C52F0033D4B0 /* SGADNClient.m */; };
+		D0E904BF1821CAB60033D4B0 /* SGADNPost.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E904BE1821CAB60033D4B0 /* SGADNPost.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0E904A51821C15B0033D4B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0E904771821C15B0033D4B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0E9047E1821C15B0033D4B0;
+			remoteInfo = ALDynamicCellHeights;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D000346A1822004D008378F6 /* SGPostBodyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPostBodyLabel.h; sourceTree = "<group>"; };
+		D000346B1822004D008378F6 /* SGPostBodyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPostBodyLabel.m; sourceTree = "<group>"; };
+		D000346D182201CA008378F6 /* NSLayoutConstraint+SGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+SGExtensions.h"; sourceTree = "<group>"; };
+		D000346E182201CA008378F6 /* NSLayoutConstraint+SGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+SGExtensions.m"; sourceTree = "<group>"; };
+		D0E9047F1821C15B0033D4B0 /* ALDynamicCellHeights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALDynamicCellHeights.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E904821821C15B0033D4B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0E904841821C15B0033D4B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0E904861821C15B0033D4B0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0E9048A1821C15B0033D4B0 /* ALDynamicCellHeights-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ALDynamicCellHeights-Info.plist"; sourceTree = "<group>"; };
+		D0E9048C1821C15B0033D4B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0E9048E1821C15B0033D4B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0E904901821C15B0033D4B0 /* ALDynamicCellHeights-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ALDynamicCellHeights-Prefix.pch"; sourceTree = "<group>"; };
+		D0E904911821C15B0033D4B0 /* SGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGAppDelegate.h; sourceTree = "<group>"; };
+		D0E904921821C15B0033D4B0 /* SGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGAppDelegate.m; sourceTree = "<group>"; };
+		D0E904951821C15B0033D4B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0E904971821C15B0033D4B0 /* SGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGViewController.h; sourceTree = "<group>"; };
+		D0E904981821C15B0033D4B0 /* SGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGViewController.m; sourceTree = "<group>"; };
+		D0E9049A1821C15B0033D4B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0E904A01821C15B0033D4B0 /* ALDynamicCellHeightsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALDynamicCellHeightsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E904A11821C15B0033D4B0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D0E904A91821C15B0033D4B0 /* ALDynamicCellHeightsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ALDynamicCellHeightsTests-Info.plist"; sourceTree = "<group>"; };
+		D0E904AB1821C15B0033D4B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0E904AD1821C15B0033D4B0 /* ALDynamicCellHeightsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDynamicCellHeightsTests.m; sourceTree = "<group>"; };
+		D0E904B71821C2730033D4B0 /* SGPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPostTableViewCell.h; sourceTree = "<group>"; };
+		D0E904B81821C2730033D4B0 /* SGPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPostTableViewCell.m; sourceTree = "<group>"; };
+		D0E904BA1821C52F0033D4B0 /* SGADNClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGADNClient.h; sourceTree = "<group>"; };
+		D0E904BB1821C52F0033D4B0 /* SGADNClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGADNClient.m; sourceTree = "<group>"; };
+		D0E904BD1821CAB60033D4B0 /* SGADNPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGADNPost.h; sourceTree = "<group>"; };
+		D0E904BE1821CAB60033D4B0 /* SGADNPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGADNPost.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0E9047C1821C15B0033D4B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E904851821C15B0033D4B0 /* CoreGraphics.framework in Frameworks */,
+				D0E904871821C15B0033D4B0 /* UIKit.framework in Frameworks */,
+				D0E904831821C15B0033D4B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E9049D1821C15B0033D4B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E904A21821C15B0033D4B0 /* XCTest.framework in Frameworks */,
+				D0E904A41821C15B0033D4B0 /* UIKit.framework in Frameworks */,
+				D0E904A31821C15B0033D4B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D000347018220AD8008378F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		D0E904761821C15B0033D4B0 = {
+			isa = PBXGroup;
+			children = (
+				D0E904881821C15B0033D4B0 /* ALDynamicCellHeights */,
+				D0E904A71821C15B0033D4B0 /* ALDynamicCellHeightsTests */,
+				D0E904811821C15B0033D4B0 /* Frameworks */,
+				D0E904801821C15B0033D4B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0E904801821C15B0033D4B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0E9047F1821C15B0033D4B0 /* ALDynamicCellHeights.app */,
+				D0E904A01821C15B0033D4B0 /* ALDynamicCellHeightsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0E904811821C15B0033D4B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0E904821821C15B0033D4B0 /* Foundation.framework */,
+				D0E904841821C15B0033D4B0 /* CoreGraphics.framework */,
+				D0E904861821C15B0033D4B0 /* UIKit.framework */,
+				D0E904A11821C15B0033D4B0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0E904881821C15B0033D4B0 /* ALDynamicCellHeights */ = {
+			isa = PBXGroup;
+			children = (
+				D0E904911821C15B0033D4B0 /* SGAppDelegate.h */,
+				D0E904921821C15B0033D4B0 /* SGAppDelegate.m */,
+				D0E904941821C15B0033D4B0 /* Main.storyboard */,
+				D0E904971821C15B0033D4B0 /* SGViewController.h */,
+				D0E904981821C15B0033D4B0 /* SGViewController.m */,
+				D0E904B71821C2730033D4B0 /* SGPostTableViewCell.h */,
+				D0E904B81821C2730033D4B0 /* SGPostTableViewCell.m */,
+				D0E904BA1821C52F0033D4B0 /* SGADNClient.h */,
+				D0E904BB1821C52F0033D4B0 /* SGADNClient.m */,
+				D0E904BD1821CAB60033D4B0 /* SGADNPost.h */,
+				D0E904BE1821CAB60033D4B0 /* SGADNPost.m */,
+				D000346A1822004D008378F6 /* SGPostBodyLabel.h */,
+				D000346B1822004D008378F6 /* SGPostBodyLabel.m */,
+				D000346D182201CA008378F6 /* NSLayoutConstraint+SGExtensions.h */,
+				D000346E182201CA008378F6 /* NSLayoutConstraint+SGExtensions.m */,
+				D0E9049A1821C15B0033D4B0 /* Images.xcassets */,
+				D0E904891821C15B0033D4B0 /* Supporting Files */,
+			);
+			path = ALDynamicCellHeights;
+			sourceTree = "<group>";
+		};
+		D0E904891821C15B0033D4B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D000347018220AD8008378F6 /* Resources */,
+				D0E9048A1821C15B0033D4B0 /* ALDynamicCellHeights-Info.plist */,
+				D0E9048B1821C15B0033D4B0 /* InfoPlist.strings */,
+				D0E9048E1821C15B0033D4B0 /* main.m */,
+				D0E904901821C15B0033D4B0 /* ALDynamicCellHeights-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0E904A71821C15B0033D4B0 /* ALDynamicCellHeightsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0E904AD1821C15B0033D4B0 /* ALDynamicCellHeightsTests.m */,
+				D0E904A81821C15B0033D4B0 /* Supporting Files */,
+			);
+			path = ALDynamicCellHeightsTests;
+			sourceTree = "<group>";
+		};
+		D0E904A81821C15B0033D4B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0E904A91821C15B0033D4B0 /* ALDynamicCellHeightsTests-Info.plist */,
+				D0E904AA1821C15B0033D4B0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0E9047E1821C15B0033D4B0 /* ALDynamicCellHeights */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0E904B11821C15B0033D4B0 /* Build configuration list for PBXNativeTarget "ALDynamicCellHeights" */;
+			buildPhases = (
+				D0E9047B1821C15B0033D4B0 /* Sources */,
+				D0E9047C1821C15B0033D4B0 /* Frameworks */,
+				D0E9047D1821C15B0033D4B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ALDynamicCellHeights;
+			productName = ALDynamicCellHeights;
+			productReference = D0E9047F1821C15B0033D4B0 /* ALDynamicCellHeights.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0E9049F1821C15B0033D4B0 /* ALDynamicCellHeightsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0E904B41821C15B0033D4B0 /* Build configuration list for PBXNativeTarget "ALDynamicCellHeightsTests" */;
+			buildPhases = (
+				D0E9049C1821C15B0033D4B0 /* Sources */,
+				D0E9049D1821C15B0033D4B0 /* Frameworks */,
+				D0E9049E1821C15B0033D4B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0E904A61821C15B0033D4B0 /* PBXTargetDependency */,
+			);
+			name = ALDynamicCellHeightsTests;
+			productName = ALDynamicCellHeightsTests;
+			productReference = D0E904A01821C15B0033D4B0 /* ALDynamicCellHeightsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0E904771821C15B0033D4B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SG;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Second Gear";
+				TargetAttributes = {
+					D0E9049F1821C15B0033D4B0 = {
+						TestTargetID = D0E9047E1821C15B0033D4B0;
+					};
+				};
+			};
+			buildConfigurationList = D0E9047A1821C15B0033D4B0 /* Build configuration list for PBXProject "ALDynamicCellHeights" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0E904761821C15B0033D4B0;
+			productRefGroup = D0E904801821C15B0033D4B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0E9047E1821C15B0033D4B0 /* ALDynamicCellHeights */,
+				D0E9049F1821C15B0033D4B0 /* ALDynamicCellHeightsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0E9047D1821C15B0033D4B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E9049B1821C15B0033D4B0 /* Images.xcassets in Resources */,
+				D0E9048D1821C15B0033D4B0 /* InfoPlist.strings in Resources */,
+				D0E904961821C15B0033D4B0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E9049E1821C15B0033D4B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E904AC1821C15B0033D4B0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0E9047B1821C15B0033D4B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E904931821C15B0033D4B0 /* SGAppDelegate.m in Sources */,
+				D0E904BC1821C52F0033D4B0 /* SGADNClient.m in Sources */,
+				D0E904991821C15B0033D4B0 /* SGViewController.m in Sources */,
+				D0E904BF1821CAB60033D4B0 /* SGADNPost.m in Sources */,
+				D0E9048F1821C15B0033D4B0 /* main.m in Sources */,
+				D0E904B91821C2730033D4B0 /* SGPostTableViewCell.m in Sources */,
+				D000346C1822004D008378F6 /* SGPostBodyLabel.m in Sources */,
+				D000346F182201CA008378F6 /* NSLayoutConstraint+SGExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E9049C1821C15B0033D4B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E904AE1821C15B0033D4B0 /* ALDynamicCellHeightsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0E904A61821C15B0033D4B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0E9047E1821C15B0033D4B0 /* ALDynamicCellHeights */;
+			targetProxy = D0E904A51821C15B0033D4B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0E9048B1821C15B0033D4B0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0E9048C1821C15B0033D4B0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0E904941821C15B0033D4B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0E904951821C15B0033D4B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0E904AA1821C15B0033D4B0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0E904AB1821C15B0033D4B0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0E904AF1821C15B0033D4B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0E904B01821C15B0033D4B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0E904B21821C15B0033D4B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ALDynamicCellHeights/ALDynamicCellHeights-Prefix.pch";
+				INFOPLIST_FILE = "ALDynamicCellHeights/ALDynamicCellHeights-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0E904B31821C15B0033D4B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ALDynamicCellHeights/ALDynamicCellHeights-Prefix.pch";
+				INFOPLIST_FILE = "ALDynamicCellHeights/ALDynamicCellHeights-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D0E904B51821C15B0033D4B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ALDynamicCellHeights.app/ALDynamicCellHeights";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ALDynamicCellHeights/ALDynamicCellHeights-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ALDynamicCellHeightsTests/ALDynamicCellHeightsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D0E904B61821C15B0033D4B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ALDynamicCellHeights.app/ALDynamicCellHeights";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ALDynamicCellHeights/ALDynamicCellHeights-Prefix.pch";
+				INFOPLIST_FILE = "ALDynamicCellHeightsTests/ALDynamicCellHeightsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0E9047A1821C15B0033D4B0 /* Build configuration list for PBXProject "ALDynamicCellHeights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E904AF1821C15B0033D4B0 /* Debug */,
+				D0E904B01821C15B0033D4B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0E904B11821C15B0033D4B0 /* Build configuration list for PBXNativeTarget "ALDynamicCellHeights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E904B21821C15B0033D4B0 /* Debug */,
+				D0E904B31821C15B0033D4B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0E904B41821C15B0033D4B0 /* Build configuration list for PBXNativeTarget "ALDynamicCellHeightsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E904B51821C15B0033D4B0 /* Debug */,
+				D0E904B61821C15B0033D4B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0E904771821C15B0033D4B0 /* Project object */;
+}

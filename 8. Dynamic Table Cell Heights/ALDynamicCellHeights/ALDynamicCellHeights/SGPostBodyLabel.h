@@ -1,0 +1,13 @@
+//
+//  SGPostBodyLabel.h
+//  ALDynamicCellHeights
+//
+//  Created by Justin Williams on 10/30/13.
+//  Copyright (c) 2013 Second Gear. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface SGPostBodyLabel : UILabel
+
+@end
